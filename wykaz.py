@@ -288,7 +288,6 @@ natural left join sciana where droga_p.sciana_id = '%i' order by droga_p.nazwa_d
             if skala in skale:
                 break
         sql = ("""INSERT INTO wykaz_p.droga_p (sciana_id, nazwa_drogi_p, wycena_p, skala_p, l_przejsc_p) VALUES ('%s', '%s', '%s', '%s', '0')""" %(self.gymID, nazwa, wycena, skala))
-        print(sql)
         self.sql_insert(sql)
         self.indoorRoutes(self.gymID)
     
